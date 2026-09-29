@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://phfp8e1h0v5i"]
+
+[ext_resource type="Texture2D" uid="uid://i7lqa4vnvrqp" path="res://Assets/characters/image 12.png" id="1_hs1m0"]
+[ext_resource type="Texture2D" uid="uid://b64cjkff0mxl5" path="res://Assets/characters/image 14.png" id="2_ejwxu"]
+[ext_resource type="Texture2D" uid="uid://dqd0l7twcsnwl" path="res://Assets/characters/image 20.png" id="3_ejwxu"]
+
+[node name="Node2D" type="Node2D" unique_id=1087406170]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1877384261]
+position = Vector2(470.00003, 573)
+scale = Vector2(0.49377236, 0.5648853)
+texture = ExtResource("1_hs1m0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1982261304]
+position = Vector2(584, 585)
+scale = Vector2(0.5871213, 0.61178845)
+texture = ExtResource("2_ejwxu")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=175793990]
+position = Vector2(701, 578)
+scale = Vector2(0.51612884, 0.55820614)
+texture = ExtResource("3_ejwxu")

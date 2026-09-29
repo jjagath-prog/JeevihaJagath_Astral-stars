@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://daco7mfg70b6t"]
+
+[ext_resource type="Script" uid="uid://b36q0blihstj8" path="res://Scripts/galaxy_map.gd" id="1_v25ao"]
+[ext_resource type="Texture2D" uid="uid://2xchdk4g6fj8" path="res://Assets/Backgrounds/Frame 4 (2).png" id="2_v25ao"]
+
+[node name="Control" type="Control" unique_id=1874272856]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_v25ao")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=447169713]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = 3.0
+offset_right = 1109.0
+offset_bottom = 615.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_v25ao")
+expand_mode = 1
+
+[node name="Level1Button" type="Button" parent="." unique_id=1812799098]
+layout_mode = 0
+offset_left = 669.0
+offset_top = 193.0
+offset_right = 791.0
+offset_bottom = 224.0
+
+[node name="Level2Button" type="Button" parent="." unique_id=391737959]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 312.0
+offset_top = 333.0
+offset_right = 403.0
+offset_bottom = 370.0
+grow_horizontal = 2
+
+[node name="Level3Button" type="Button" parent="." unique_id=94156466]
+layout_mode = 0
+offset_left = 578.0
+offset_top = 322.0
+offset_right = 730.0
+offset_bottom = 358.0
+
+[node name="Level4Button" type="Button" parent="." unique_id=1167695391]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 570.0
+offset_right = 700.0
+offset_bottom = 620.0

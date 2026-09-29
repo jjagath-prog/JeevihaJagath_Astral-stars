@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cx6agxsuhxoty"]
+
+[ext_resource type="PackedScene" uid="uid://c86mbs6kauut7" path="res://Scenes/battle_menu.tscn" id="1_1pmnf"]
+
+[sub_resource type="GDScript" id="GDScript_1pmnf"]
+script/source = "
+extends Control
+
+var is_starting = false
+
+func _input(event: InputEvent) -> void:
+	if is_starting:
+		return
+
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			start_battle()
+
+	if event is InputEventKey:
+		if event.pressed and event.keycode == KEY_ENTER:
+			start_battle()
+
+func start_battle() -> void:
+	is_starting = true
+
+	TransitionScene.transition_to(
+		\"res://Scenes/level3.tscn\"
+	)
+"
+
+[node name="Control" type="Control" unique_id=1746030868]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = SubResource("GDScript_1pmnf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=882584629]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 643.0
+
+[node name="battle menu" parent="." unique_id=617892310 instance=ExtResource("1_1pmnf")]

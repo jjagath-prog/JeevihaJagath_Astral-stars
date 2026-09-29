@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://xfe8inb37nlt"]
+
+[ext_resource type="Texture2D" uid="uid://dqd0l7twcsnwl" path="res://Assets/characters/image 20.png" id="1_11pyp"]
+[ext_resource type="Script" uid="uid://cx7eeeo41uew3" path="res://Scripts/blade_1_.gd" id="1_xlbvp"]
+[ext_resource type="PackedScene" uid="uid://qt56tnfek538" path="res://Scenes/Projectile.tscn" id="2_r6kgg"]
+[ext_resource type="Texture2D" uid="uid://dia4tppyd227o" path="res://Assets/Icons/shooting 1.png" id="3_q2t6w"]
+
+[node name="blade" type="Node2D" unique_id=200733781]
+rotation = 0.017453292
+script = ExtResource("1_xlbvp")
+projectile_scene = ExtResource("2_r6kgg")
+projectile_texture = ExtResource("3_q2t6w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=785719582]
+position = Vector2(164, 187)
+scale = Vector2(0.4193548, 0.46564886)
+texture = ExtResource("1_11pyp")
+
+[node name="ShootPoint" type="Marker2D" parent="." unique_id=1736787187]
+position = Vector2(219, 231)
+
+[node name="Healthbar" type="ProgressBar" parent="." unique_id=455973876]
+offset_left = 130.0
+offset_top = 109.0
+offset_right = 326.0
+offset_bottom = 136.0
+value = 100.0

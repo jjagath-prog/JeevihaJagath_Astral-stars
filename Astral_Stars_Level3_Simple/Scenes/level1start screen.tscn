@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://br84lx44tqw6c"]
+
+[ext_resource type="Texture2D" uid="uid://bi7jmjcp72fbu" path="res://Assets/Backgrounds/TV - 7.png" id="1_vlbvx"]
+
+[sub_resource type="GDScript" id="GDScript_3e1ld"]
+script/source = "
+extends Control
+
+var is_starting := false
+
+
+func _input(event: InputEvent) -> void:
+	if is_starting:
+		return
+
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			start_battle()
+
+	if event is InputEventKey:
+		if event.pressed and event.keycode == KEY_ENTER:
+			start_battle()
+
+
+func start_battle() -> void:
+	is_starting = true
+
+	TransitionScene.transition_to(
+		\"res://Scenes/level1.tscn\"
+	)
+"
+
+[node name="Control" type="Control" unique_id=152432909]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1155.0
+offset_bottom = 705.0
+script = SubResource("GDScript_3e1ld")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=570640897]
+layout_mode = 0
+offset_right = 1171.0
+offset_bottom = 634.0
+texture = ExtResource("1_vlbvx")
+expand_mode = 1

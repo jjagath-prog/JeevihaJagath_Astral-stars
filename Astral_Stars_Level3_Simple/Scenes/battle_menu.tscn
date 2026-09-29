@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://c86mbs6kauut7"]
+
+[ext_resource type="Texture2D" uid="uid://bq7vo3jwcboub" path="res://Assets/Icons/Group (1).png" id="1_6d65x"]
+[ext_resource type="Script" uid="uid://bvhslvyn313d4" path="res://Scripts/battle_menu.gd" id="1_mfnua"]
+[ext_resource type="Texture2D" uid="uid://e1ntditlxpxq" path="res://Assets/Icons/X.png" id="2_mfnua"]
+[ext_resource type="Shader" uid="uid://cjs18l12s7lfw" path="res://Assets/texts/battle_menu.gdshader" id="2_n4ote"]
+[ext_resource type="Texture2D" uid="uid://pv0n2qiyqwy1" path="res://Assets/Icons/Rectangle 22 (2).png" id="3_n4ote"]
+[ext_resource type="Texture2D" uid="uid://bjbk1e142nkcv" path="res://Assets/texts/RESUME.png" id="4_8gid6"]
+[ext_resource type="Texture2D" uid="uid://cannorpwbxgwk" path="res://Assets/texts/RESTART.png" id="5_mt5bp"]
+[ext_resource type="Texture2D" uid="uid://bcnxxkn4cyrd0" path="res://Assets/texts/MAP (1).png" id="6_c4bl4"]
+[ext_resource type="Texture2D" uid="uid://4726rwqpslbg" path="res://Assets/Backgrounds/QUIT.png" id="8_yx3a8"]
+[ext_resource type="Texture2D" uid="uid://cj5t1dw216s15" path="res://Assets/Backgrounds/YES.png" id="9_n6akc"]
+[ext_resource type="Texture2D" uid="uid://ddgn1ll86pkmb" path="res://Assets/Backgrounds/NO.png" id="10_ee55s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c4bl4"]
+shader = ExtResource("2_n4ote")
+
+[node name="battle menu" type="CanvasLayer" unique_id=617892310]
+script = ExtResource("1_mfnua")
+
+[node name="blur" type="ColorRect" parent="." unique_id=1799728622]
+visible = false
+material = SubResource("ShaderMaterial_c4bl4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="pause" type="TextureButton" parent="." unique_id=442916651]
+offset_right = 58.0
+offset_bottom = 61.0
+texture_normal = ExtResource("1_6d65x")
+
+[node name="quit" type="TextureButton" parent="." unique_id=1040513104]
+anchors_preset = -1
+anchor_right = 0.18400002
+anchor_bottom = 0.21100001
+offset_left = 1117.0
+offset_top = -4.0
+offset_right = 979.032
+offset_bottom = -71.72801
+texture_normal = ExtResource("2_mfnua")
+
+[node name="pause panel" type="Control" parent="." unique_id=760405300]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 302.0
+offset_top = 382.0
+offset_right = 844.0
+offset_bottom = 382.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pause panel" unique_id=1241505684]
+layout_mode = 0
+offset_top = -266.0
+offset_right = 542.0
+offset_bottom = 150.0
+
+[node name="resume" type="Button" parent="pause panel/VBoxContainer" unique_id=488958428]
+layout_mode = 2
+icon = ExtResource("3_n4ote")
+
+[node name="restart" type="Button" parent="pause panel/VBoxContainer" unique_id=445376066]
+layout_mode = 2
+icon = ExtResource("3_n4ote")
+
+[node name="Map" type="Button" parent="pause panel/VBoxContainer" unique_id=1337299907]
+layout_mode = 2
+icon = ExtResource("3_n4ote")
+
+
+[node name="Resume" type="Sprite2D" parent="pause panel/VBoxContainer" unique_id=991966878]
+position = Vector2(251, 54)
+texture = ExtResource("4_8gid6")
+
+[node name="Restart" type="Sprite2D" parent="pause panel/VBoxContainer" unique_id=757865274]
+position = Vector2(262, 152)
+texture = ExtResource("5_mt5bp")
+
+[node name="Map(1)" type="Sprite2D" parent="pause panel/VBoxContainer" unique_id=1723114333]
+position = Vector2(262, 248)
+texture = ExtResource("6_c4bl4")
+
+
+[node name="quit panel" type="Control" parent="." unique_id=791220466]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = -10.0
+offset_right = 23.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="quit panel" unique_id=1301409008]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 326.0
+offset_right = 826.0
+offset_bottom = 528.0
+
+[node name="yes" type="Button" parent="quit panel/VBoxContainer" unique_id=154323147]
+layout_mode = 2
+icon = ExtResource("3_n4ote")
+
+[node name="no" type="Button" parent="quit panel/VBoxContainer" unique_id=285307540]
+layout_mode = 2
+icon = ExtResource("3_n4ote")
+
+[node name="Quit" type="Sprite2D" parent="quit panel/VBoxContainer" unique_id=2040557548]
+position = Vector2(280, -89)
+texture = ExtResource("8_yx3a8")
+
+[node name="Yes" type="Sprite2D" parent="quit panel/VBoxContainer" unique_id=930569455]
+position = Vector2(253, 47)
+texture = ExtResource("9_n6akc")
+
+[node name="No" type="Sprite2D" parent="quit panel/VBoxContainer" unique_id=423105730]
+position = Vector2(249, 162)
+texture = ExtResource("10_ee55s")
+

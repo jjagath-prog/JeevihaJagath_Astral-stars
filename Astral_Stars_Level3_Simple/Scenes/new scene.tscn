@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://8pv7al0rp2fh"]
+
+[ext_resource type="Texture2D" uid="uid://dqd0l7twcsnwl" path="res://Assets/characters/image 20.png" id="1_cmhj8"]
+
+[node name="Node2D" type="Node2D" unique_id=200733781]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=785719582]
+position = Vector2(164, 187)
+scale = Vector2(0.4193548, 0.46564886)
+texture = ExtResource("1_cmhj8")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1736787187]
+position = Vector2(214, 222)
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=455973876]
+offset_right = 4.0
+offset_bottom = 27.0

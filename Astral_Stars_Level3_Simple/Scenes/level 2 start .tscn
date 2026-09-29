@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cpf15db183jq4"]
+
+[ext_resource type="Texture2D" uid="uid://brogt6nn62w6w" path="res://Assets/Backgrounds/TV - 12.png" id="1_2h0u2"]
+[ext_resource type="PackedScene" uid="uid://c86mbs6kauut7" path="res://Scenes/battle_menu.tscn" id="2_vteuf"]
+[ext_resource type="Script" uid="uid://cudtj6yyxieqe" path="res://Scripts/level2_goal.gd" id="3_goal"]
+
+[node name="Control" type="Control" unique_id=1507569145]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1159.0
+offset_bottom = 647.0
+script = ExtResource("3_goal")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=432402545]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 644.0
+texture = ExtResource("1_2h0u2")
+expand_mode = 1
+
+[node name="battle menu" parent="." unique_id=617892310 instance=ExtResource("2_vteuf")]

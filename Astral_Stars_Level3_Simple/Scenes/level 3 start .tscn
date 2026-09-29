@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dwoqv0genw0fm"]
+
+[ext_resource type="Script" uid="uid://chp4gp8bx8uvr" path="res://Scripts/level3_start.gd" id="1_pvxyc"]
+[ext_resource type="Texture2D" uid="uid://dcsgihktxn87p" path="res://Assets/Backgrounds/TV - 12 (4).png" id="2_pvxyc"]
+[ext_resource type="PackedScene" uid="uid://c86mbs6kauut7" path="res://Scenes/battle_menu.tscn" id="3_p2mo7"]
+
+[node name="Control" type="Control" unique_id=1507569145]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1159.0
+offset_bottom = 647.0
+script = ExtResource("1_pvxyc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=432402545]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 644.0
+texture = ExtResource("2_pvxyc")
+expand_mode = 1
+
+[node name="battle menu" parent="." unique_id=617892310 instance=ExtResource("3_p2mo7")]

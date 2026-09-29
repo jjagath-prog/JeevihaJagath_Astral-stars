@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://goo3eitoygbr"]
+
+[ext_resource type="PackedScene" uid="uid://c86mbs6kauut7" path="res://Scenes/battle_menu.tscn" id="1_0fbet"]
+
+[node name="Control" type="Control" unique_id=1769312638]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1773128830]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="battle menu" parent="." unique_id=617892310 instance=ExtResource("1_0fbet")]

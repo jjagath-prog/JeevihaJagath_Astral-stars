@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b8wqqx5tvt5nm"]
+
+[ext_resource type="Script" uid="uid://dksapoq14ga64" path="res://Scripts/levels.gd" id="1_mhlpv"]
+[ext_resource type="Texture2D" uid="uid://jvucbsei4rrs" path="res://Assets/Backgrounds/Screenshot 2026-09-28 043058.png" id="2_lgosu"]
+[ext_resource type="PackedScene" uid="uid://c86mbs6kauut7" path="res://Scenes/battle_menu.tscn" id="3_vn2uo"]
+[ext_resource type="Texture2D" uid="uid://dqd0l7twcsnwl" path="res://Assets/characters/image 20.png" id="4_mtqcm"]
+[ext_resource type="Texture2D" uid="uid://cl1yan7tymped" path="res://Assets/characters/frost_spawn_blue.png" id="5_mmf1u"]
+[ext_resource type="Texture2D" uid="uid://dia4tppyd227o" path="res://Assets/Icons/shooting 1.png" id="6_vn460"]
+[ext_resource type="Texture2D" uid="uid://b35oodgn36iyj" path="res://Assets/Icons/Rectangle 58 (1).png" id="7_mhlpv"]
+
+[node name="Control" type="Control" unique_id=928398660]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 640.0
+script = ExtResource("1_mhlpv")
+level_number = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1407033749]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 3.0
+offset_right = 1151.0
+offset_bottom = 639.0
+texture = ExtResource("2_lgosu")
+
+[node name="battle menu" parent="." unique_id=617892310 instance=ExtResource("3_vn2uo")]
+
+[node name="blade" type="Sprite2D" parent="." unique_id=465967347]
+position = Vector2(178.00002, 438)
+scale = Vector2(0.95564526, 0.98091596)
+texture = ExtResource("4_mtqcm")
+
+[node name="Enemy" type="Sprite2D" parent="." unique_id=1328545690]
+position = Vector2(930.99994, 453.99997)
+scale = Vector2(11.20729, 10.017731)
+texture = ExtResource("5_mmf1u")
+
+[node name="AttackButton" type="Button" parent="." unique_id=1748979547]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 571.0
+offset_right = 75.0
+offset_bottom = 632.0
+
+[node name="Shooting1" type="Sprite2D" parent="." unique_id=1234087049]
+position = Vector2(38.937508, 601.9375)
+scale = Vector2(0.6539115, 0.6794216)
+texture = ExtResource("6_vn460")
+
+[node name="player" type="ProgressBar" parent="." unique_id=62035372]
+modulate = Color(0.1882353, 1, 1, 1)
+layout_mode = 0
+offset_left = 98.0
+offset_top = 319.0
+offset_right = 460.0
+offset_bottom = 346.0
+
+[node name="enemy" type="ProgressBar" parent="." unique_id=749406885]
+modulate = Color(1, 0.101960786, 0.078431375, 1)
+layout_mode = 0
+offset_left = 769.0
+offset_top = 303.0
+offset_right = 1006.0
+offset_bottom = 330.0
+
+[node name="EnemyBullet" type="Sprite2D" parent="." unique_id=117185816]
+position = Vector2(804, 520)
+scale = Vector2(1.2134144, 1.6764697)
+texture = ExtResource("7_mhlpv")
